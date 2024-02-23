@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
-@Table(name = "TB_PERSONS")
 public class PersonModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -22,11 +21,6 @@ public class PersonModel implements Serializable {
     private String phoneNumber;
     @Column(nullable = false, unique = true, length = 50)
     private String email;
-
-    public PersonModel() {
-        this.id = id;
-    }
-
 
     public UUID getId() {
         return id;
